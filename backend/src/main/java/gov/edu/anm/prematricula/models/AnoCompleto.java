@@ -21,6 +21,14 @@ public class AnoCompleto extends Ano {
 	@Column(name = "NOTA")
 	private Map<UUID, Double> mediasAnuais = new HashMap<UUID, Double>();
 
+	public Map<UUID, Double> getMediasAnuais() {
+		return mediasAnuais;
+	}
+
+	public void setMediasAnuais(Map<UUID, Double> mediasAnuais) {
+		this.mediasAnuais = mediasAnuais;
+	}
+
 	public AnoCompleto(Map<UUID, Double> mediasAnuais) {
 		this.mediasAnuais = mediasAnuais;
 	}

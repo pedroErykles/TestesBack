@@ -15,7 +15,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "TB_STUDENT")
-public class Student {
+public class Estudante {
 	
 	@Id
 	@Column(name = "student_id")
@@ -37,16 +37,16 @@ public class Student {
 
 	private Concorrencia concorrencia;
 	
-	private boolean PCD;
+	private boolean pCD;
 	
 	private String nomeSocial;
 	
 	private boolean aprovacaoValida;
 
-	public Student() {
+	public Estudante() {
 	}
 
-	public Student(Historico historico, String nome, Curso curso, String telefone, RedeDeEnsino redeDeEnsino,
+	public Estudante(Historico historico, String nome, Curso curso, String telefone, RedeDeEnsino redeDeEnsino,
 			Concorrencia concorrencia, boolean pCD, String nomeSocial, boolean aprovacaoValida) {
 		this.historico = historico;
 		this.nome = nome;
@@ -54,7 +54,7 @@ public class Student {
 		this.telefone = telefone;
 		this.redeDeEnsino = redeDeEnsino;
 		this.concorrencia = concorrencia;
-		PCD = pCD;
+		this.pCD = pCD;
 		this.nomeSocial = nomeSocial;
 		this.aprovacaoValida = aprovacaoValida;
 	}
@@ -66,8 +66,6 @@ public class Student {
 	public void setHistorico(Historico historico) {
 		this.historico = historico;
 	}
-
-
 
 	public UUID getId() {
 		return id;
@@ -118,11 +116,11 @@ public class Student {
 	}
 
 	public boolean isPCD() {
-		return PCD;
+		return pCD;
 	}
 
 	public void setPCD(boolean pCD) {
-		PCD = pCD;
+		this.pCD = pCD;
 	}
 
 	public String getNomeSocial() {

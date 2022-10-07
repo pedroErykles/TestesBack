@@ -20,5 +20,13 @@ public abstract class Ano {
 	private UUID id;
 	
 	public abstract Double getMediaAnual();
+
+	public UUID getId() {
+		return id;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
 	
 }
